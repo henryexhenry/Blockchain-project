@@ -1,12 +1,12 @@
 # Simple Blockchain System
-###Brief introduction
+### Brief introduction
 
 In this project, a basic prototype of blockchain has been implemented. 
 This is a simplified Bitcoin system which include some essential components of bitcoin, 
 such as decentralized networking, proof of work algorithm, transaction pool, merkle root, etc.
 The system is written by Python, and MongoDB is involved in our system.
 
-###Block prototype
+### Block prototype
 
 1. index
 2. hash
@@ -22,7 +22,7 @@ The system is written by Python, and MongoDB is involved in our system.
 7. spendtime
  - *Time that we need for mining a block*
      
-###Decentralized network
+### Decentralized network
 
 After each node successfully mined a new block, it will send message to neighbor nodes.
 Now let say Node 1 has successfully mined a new block, it has to send the block data to node 2. In this situation, Node 2 acts as a server node and Node 1 will be the client node.
@@ -50,7 +50,7 @@ back to string, and read by node 2.
 Now the data transfering between 2 nodes is completed. Two nodes will now close the connection
 by using code `s.close()`.
     
-###PoW algorithm:
+### PoW algorithm:
 - `gen_hash()`    (*return : hash and nonce*)
         
     for simplification, we set the target value to be 6.
@@ -72,7 +72,7 @@ by using code `s.close()`.
     Then feed the mine function with `pv_id`, `pv_hash` and `tx data`, 
     and apply mine function to obtain a block.
 
-###Database (*5 tables*)
+### Database (*5 tables*)
 
 1. col_bk: store block information
 2. chain_01: store blockchain copy of node 1
@@ -120,7 +120,7 @@ by using code `s.close()`.
     This file helps users to perform checking and deleting operations toward database.
     We can easily obtain or delete all records from all collections or any chain of a single node.
 
-###Demo:
+### Demo:
 - Step 1: 
 
     Start MongoDB server by using the command: `mongod --dbpath <path of the data file>`.
@@ -137,7 +137,7 @@ by using code `s.close()`.
 
 Run `op.py` to get data from database.
 
-###Packages:
+### Packages:
 - socket
 - threading
 - time 
