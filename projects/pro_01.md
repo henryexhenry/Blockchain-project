@@ -113,10 +113,12 @@ by using code `s.close()`.
     (*port: 8003*)
 
 5. getTx.py
+
     This file helps collect transaction messages from users and store them into database. 
     It requests user for two transactions in each loop.
 
 6. op.py
+
     This file helps users to perform checking and deleting operations toward database.
     We can easily obtain or delete all records from all collections or any chain of a single node.
 
