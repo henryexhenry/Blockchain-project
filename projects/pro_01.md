@@ -81,7 +81,7 @@ by using code `s.close()`.
 5. tx_pool: store transactions given by user
 
 
-###Files:
+### Files:
 1. blockchain.py
 
     prototype of block, blockchain, definition of mine function, PoW function (gen_hash()), function for finding merkle root.
